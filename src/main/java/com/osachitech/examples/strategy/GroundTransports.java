@@ -23,8 +23,8 @@ public enum GroundTransports implements Transport {
 
     @Override
     public Trajectory move(long kilometerDistance) {
-        if(kilometerDistance < 0) {
-            throw new IllegalArgumentException("the kilometer distance cannot be negative");
+        if(kilometerDistance <= 0) {
+            throw new IllegalArgumentException("the kilometer distance cannot be negative or zero");
         }
 
         return null;
