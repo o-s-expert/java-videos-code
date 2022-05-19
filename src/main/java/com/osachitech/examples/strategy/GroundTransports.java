@@ -2,17 +2,17 @@ package com.osachitech.examples.strategy;
 
 public enum GroundTransports implements Transport {
 
-    BIKE("Bike", 1, 0),
+    BIKE("Bike", 20, 0),
     BUS("Bus", 1, 0.5),
     TAXI("Taxi", 1, 2);
 
     private final String name;
-    private final int speedFactor;
+    private final int speedKilometerHours;
     private final double priceFactor;
 
-    GroundTransports(String name, int speedFactor, double priceFactor) {
+    GroundTransports(String name, int speedKilometerHours, double priceFactor) {
         this.name = name;
-        this.speedFactor = speedFactor;
+        this.speedKilometerHours = speedKilometerHours;
         this.priceFactor = priceFactor;
     }
 
