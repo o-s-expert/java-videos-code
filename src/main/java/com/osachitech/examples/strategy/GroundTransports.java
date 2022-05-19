@@ -1,23 +1,32 @@
 package com.osachitech.examples.strategy;
 
-import javax.money.MonetaryAmount;
+public enum GroundTransports implements Transport {
 
-public enum Transports implements Transport {
-    BIKE("bike", 1, 0),
-    BUS("bus", 1, 0),
-    TAXI("bike", 1, 0);
+    BIKE("Bike", 1, 0),
+    BUS("Bus", 1, 0.5),
+    TAXI("Taxi", 1, 2);
 
-    Transports(String name, int speedFactor, int priceFactor) {
+    private final String name;
+    private final int speedFactor;
+    private final double priceFactor;
 
+    GroundTransports(String name, int speedFactor, double priceFactor) {
+        this.name = name;
+        this.speedFactor = speedFactor;
+        this.priceFactor = priceFactor;
     }
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
     public Trajectory getPrice(long kilometerDistance) {
+        if(kilometerDistance < 0) {
+            throw new IllegalArgumentException("the kilometer distance cannot be negative");
+        }
+
         return null;
     }
 }
