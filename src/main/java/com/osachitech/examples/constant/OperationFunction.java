@@ -15,7 +15,7 @@ public enum OperationFunction {
         this.operation = operation;
     }
 
-    public Double compute(Double x, Double y) {
+    public Double operate(Double x, Double y) {
         return operation.apply(x,y);
     }
 }
