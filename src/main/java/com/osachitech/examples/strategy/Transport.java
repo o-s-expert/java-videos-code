@@ -4,5 +4,5 @@ public interface Transport {
 
     String getName();
 
-    Trajectory getPrice(long kilometerDistance);
+    Trajectory move(long kilometerDistance);
 }
