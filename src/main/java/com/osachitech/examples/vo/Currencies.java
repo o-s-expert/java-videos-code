@@ -4,12 +4,12 @@ import javax.money.CurrencyUnit;
 import javax.money.Monetary;
 import java.util.function.Supplier;
 
-public enum Monetaries implements Supplier<CurrencyUnit> {
+public enum Currencies implements Supplier<CurrencyUnit> {
 
     EURO("EUR"),DOLLAR("USD");
 
     private CurrencyUnit currency;
-    Monetaries(String currencyCode) {
+    Currencies(String currencyCode) {
         this.currency = Monetary.getCurrency(currencyCode);
     }
 
