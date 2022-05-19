@@ -6,7 +6,5 @@ public interface Transport {
 
     String getName();
 
-    MonetaryAmount getPrice(long kilometerDistance);
-
-
+    Trajectory getPrice(long kilometerDistance);
 }
