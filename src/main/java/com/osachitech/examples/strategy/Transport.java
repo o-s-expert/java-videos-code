@@ -1,8 +1,13 @@
 package com.osachitech.examples.strategy;
 
-import java.util.function.Predicate;
+import javax.money.MonetaryAmount;
+import java.time.Duration;
 
-public interface DocumentValidation extends Predicate<String> {
+public interface Transport {
 
     String getName();
+
+    MonetaryAmount getPrice(long kilometerDistance);
+
+
 }
