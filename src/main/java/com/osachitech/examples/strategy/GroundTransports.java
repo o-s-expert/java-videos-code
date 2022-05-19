@@ -1,10 +1,19 @@
 package com.osachitech.examples.strategy;
 
+import com.osachitech.examples.vo.Currencies;
+import org.javamoney.moneta.Money;
+
+import javax.money.MonetaryAmount;
+import java.math.BigDecimal;
+import java.time.Duration;
+
+import static com.osachitech.examples.vo.Currencies.EURO;
+
 public enum GroundTransports implements Transport {
 
     BIKE("Bike", 20, 0),
-    BUS("Bus", 1, 0.5),
-    TAXI("Taxi", 1, 2);
+    BUS("Bus", 50, 0.1),
+    TAXI("Taxi", 100, 0.5);
 
     private final String name;
     private final int speedKilometerHours;
@@ -23,10 +32,11 @@ public enum GroundTransports implements Transport {
 
     @Override
     public Trajectory move(long kilometerDistance) {
-        if(kilometerDistance <= 0) {
+        if (kilometerDistance <= 0) {
             throw new IllegalArgumentException("the kilometer distance cannot be negative or zero");
         }
-
-        return null;
+        Duration duration = Duration.ofHours(kilometerDistance / this.speedKilometerHours);
+        MonetaryAmount cost = Money.of(kilometerDistance * this.priceFactor, EURO.get());
+        return Trajectory.of(cost, duration);
     }
 }

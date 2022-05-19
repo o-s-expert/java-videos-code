@@ -31,12 +31,31 @@ class GroundTransportsTest {
     }
 
     @Test
-    public void shouldMoveOneHundredKM() {
+    public void shouldMoveOneHundredKMAsBike() {
         MonetaryAmount free = Money.of(0, Currencies.EURO.get());
-
-        Trajectory move = BIKE.move(100);
+        Transport transport = BIKE;
+        Trajectory move = transport.move(100);
         Assertions.assertEquals(Duration.ofHours(5L), move.getDuration());
-        Assertions.assertEquals(free, move.getDuration());
+        Assertions.assertEquals(free, move.getCost());
+    }
+
+    @Test
+    public void shouldMoveOneHundredKMAsBus() {
+        MonetaryAmount free = Money.of(10, Currencies.EURO.get());
+        Transport transport = BUS;
+        Trajectory move = transport.move(100);
+        Assertions.assertEquals(Duration.ofHours(2L), move.getDuration());
+        Assertions.assertEquals(free, move.getCost());
+    }
+
+
+    @Test
+    public void shouldMoveOneHundredKMAsTaxi() {
+        MonetaryAmount free = Money.of(50, Currencies.EURO.get());
+        Transport transport = TAXI;
+        Trajectory move = transport.move(100);
+        Assertions.assertEquals(Duration.ofHours(1L), move.getDuration());
+        Assertions.assertEquals(free, move.getCost());
     }
 
 }
