@@ -14,6 +14,7 @@
     <modules>
         <module>01-enum-advanced</module>
         <module>02-three-states</module>
+        <module>03-optimizing-optional</module>
     </modules>
     
 </project>
