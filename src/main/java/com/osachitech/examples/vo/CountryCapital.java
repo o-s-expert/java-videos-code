@@ -2,7 +2,8 @@ package com.osachitech.examples.vo;
 
 public enum CountryCapital {
 
-    BRAZIL("Brazil", "Brasilia"), ENGLAND("England", "London"),
+    BRAZIL("Brazil", "Brasilia"),
+    ENGLAND("England", "London"),
     ITALY("Italy", "Rome"),
     GREEK("Greek", "Athens");
 
