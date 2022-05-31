@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.osachitech.examples</groupId>
-    <artifactId>enum-advanced</artifactId>
+    <artifactId>three-states</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>enum-advanced</name>
+    <name>three-states</name>
     <url>http://www.osachitech.com</url>
 
     <properties>
