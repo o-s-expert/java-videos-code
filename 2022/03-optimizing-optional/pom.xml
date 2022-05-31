@@ -8,7 +8,7 @@
     <artifactId>three-states</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>three-states</name>
+    <name>optimizing-optional</name>
     <url>http://www.osachitech.com</url>
 
     <properties>
