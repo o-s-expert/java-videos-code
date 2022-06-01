@@ -10,6 +10,8 @@ public class Person {
 
     private String occupation;
 
+
+
     @Deprecated
     Person() {
     }
@@ -30,5 +32,9 @@ public class Person {
 
     public Optional<String> getOccupation() {
         return Optional.ofNullable(occupation);
+    }
+
+    public static PersonBuilder builder() {
+        return new PersonBuilder();
     }
 }
