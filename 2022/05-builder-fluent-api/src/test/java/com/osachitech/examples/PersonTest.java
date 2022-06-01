@@ -10,7 +10,7 @@ class PersonTest {
         String name = "Ada";
         String occupation = "Engineer";
         String city = "London";
-        Person person = new PersonBuilder().name(name).city(city).occupation(occupation).build();
+        Person person = Person.builder().name(name).city(city).occupation(occupation).build();
         Assertions.assertEquals(name, person.getName());
         Assertions.assertEquals(occupation, person.getOccupation().orElse(""));
         Assertions.assertEquals(city, person.getCity());
@@ -19,9 +19,8 @@ class PersonTest {
     @Test
     public void shouldCreatePersonWithNoOccupation() {
         String name = "Ada";
-        String occupation = null;
         String city = "London";
-        Person person = new PersonBuilder().name(name).city(city).build();
+        Person person = Person.builder().name(name).city(city).build();
         Assertions.assertEquals(name, person.getName());
         Assertions.assertTrue(person.getOccupation().isEmpty());
         Assertions.assertEquals(city, person.getCity());
