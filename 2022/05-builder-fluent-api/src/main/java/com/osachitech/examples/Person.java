@@ -37,4 +37,8 @@ public class Person {
     public static PersonBuilder builder() {
         return new PersonBuilder();
     }
+
+    public static PersonFluent.PersonCity name(String name) {
+        return PersonFluent.name(name);
+    }
 }
