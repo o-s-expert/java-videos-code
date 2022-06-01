@@ -17,6 +17,7 @@
         <module>03-optimizing-optional</module>
         <module>04-encapsulation</module>
         <module>05-builder-fluent-api</module>
+        <module>06-money-api</module>
     </modules>
     
 </project>
