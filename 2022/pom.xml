@@ -16,6 +16,7 @@
         <module>02-three-states</module>
         <module>03-optimizing-optional</module>
         <module>04-encapsulation</module>
+        <module>05-builder-fluent-api</module>
     </modules>
     
 </project>
