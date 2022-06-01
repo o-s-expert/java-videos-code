@@ -4,17 +4,16 @@ import java.util.Objects;
 
 public class PersonDSL implements PersonFluent, PersonFluent.PersonCity, PersonFluent.PersonBuild {
 
-    private String name;
+    private final String name;
 
     private String city;
 
     private String occupation;
 
-    @Override
-    public PersonCity name(String name) {
-        this.name = Objects.requireNonNull(name, "name is required");
-        return this;
+    public PersonDSL(String name) {
+        this.name = name;
     }
+
 
     @Override
     public PersonBuild city(String city) {
