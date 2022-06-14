@@ -32,6 +32,37 @@ public class Player {
     Player() {
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public MonetaryAmount getSalary() {
+        return salary;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" +
+                "name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                ", salary=" + salary +
+                ", score=" + score +
+                ", position=" + position +
+                '}';
+    }
+
     public static PlayerBuilder builder() {
         return new PlayerBuilder();
     }
