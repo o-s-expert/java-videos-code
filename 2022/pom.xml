@@ -20,6 +20,8 @@
         <module>06-functions-composite</module>
         <module>07-interface</module>
         <module>08-money-api</module>
+        <module>09-intro-rich-model</module>
+        <module>10-collector</module>
     </modules>
     
 </project>
