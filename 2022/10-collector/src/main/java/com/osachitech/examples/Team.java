@@ -1,11 +1,14 @@
 package com.osachitech.examples;
 
+import javax.money.CurrencyUnit;
+import javax.money.Monetary;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class Team {
@@ -44,6 +47,12 @@ public class Team {
                 .stream()
                 .mapToInt(Player::getScore)
                 .summaryStatistics();
+    }
+
+    public PlayerSummary getSummary() {
+        CurrencyUnit currency = Monetary.getCurrency("USD");
+        Supplier<PlayerSummary> supplier = () -> new PlayerSummary(currency);
+        return this.players.stream().collect(supplier, PlayerSummary::accept, PlayerSummary::combine);
     }
 
     public static Team of(String name) {
