@@ -21,4 +21,11 @@ public class Music {
     public void stop() {
         System.out.println("Stop sinning the music: " + sing);
     }
+
+    @Override
+    public String toString() {
+        return "Music{" +
+                "sing='" + sing + '\'' +
+                '}';
+    }
 }

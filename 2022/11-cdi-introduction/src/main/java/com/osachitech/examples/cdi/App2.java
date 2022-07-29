@@ -1,6 +1,7 @@
 package com.osachitech.examples.cdi;
 
 import com.osachitech.examples.cdi.music.Music;
+import com.osachitech.examples.cdi.music.MusicService;
 import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
 import org.javamoney.moneta.Money;
@@ -20,6 +21,9 @@ public class App2 {
             MonetaryAmount money = Money.of(10, currency);
 
             System.out.println("The money value: " + money);
+
+            MusicService service = container.select(MusicService.class).get();
+            service.sing();
 
 
         }
