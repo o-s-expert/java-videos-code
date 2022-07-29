@@ -22,7 +22,7 @@
         <maven.surefire.plugin.version>2.22.2</maven.surefire.plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.vesion>3.3.0</maven-javadoc-plugin.vesion>
-        <weld.se.core.version>5.0.0.Final</weld.se.core.version>
+        <weld.se.core.version>5.0.1.Final</weld.se.core.version>
     </properties>
 
     <dependencies>
