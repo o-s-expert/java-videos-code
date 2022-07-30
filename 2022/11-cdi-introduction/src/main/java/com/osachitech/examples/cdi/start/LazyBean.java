@@ -11,7 +11,6 @@ public class LazyBean {
     public void setUp() {
         System.out.println("Application starting up on the lazy way");
     }
-
     public void action() {
         System.out.println("Let me do something");
     }
