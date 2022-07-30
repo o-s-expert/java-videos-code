@@ -18,7 +18,7 @@ public class Manager implements Worker{
 
     @Override
     public String work(String job) {
-        return "A manager has received the job and it will delegate to a programmer -> "
+        return "A manager has received the job, and it will delegate to a programmer -> "
                 + worker.work(job);
     }
 }
