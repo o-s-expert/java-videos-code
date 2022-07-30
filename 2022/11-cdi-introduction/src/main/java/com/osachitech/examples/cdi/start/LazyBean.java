@@ -6,7 +6,6 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class LazyBean {
-
     @PostConstruct
     public void setUp() {
         System.out.println("Application starting up on the lazy way");
