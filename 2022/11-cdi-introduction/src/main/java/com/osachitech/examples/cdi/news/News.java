@@ -10,7 +10,6 @@ public class News implements Supplier<String> {
         this.value = value;
     }
 
-
     @Override
     public String get() {
         return value;
