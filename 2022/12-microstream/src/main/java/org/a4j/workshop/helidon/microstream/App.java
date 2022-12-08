@@ -21,25 +21,37 @@ package org.a4j.workshop.helidon.microstream;
  * #L%
  */
 
-import one.microstream.storage.types.StorageManager;
-
 import javax.enterprise.inject.se.SeContainer;
 import javax.enterprise.inject.se.SeContainerInitializer;
+import java.time.Year;
+import java.util.UUID;
 
 
 public class App {
     public static void main(final String[] args) {
         try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            final StorageManager manager = container.select(StorageManager.class).get();
-            final Object root = manager.root();
-            System.out.println("The root value: " + root);
-            final NamesService service = container.select(NamesService.class).get();
 
-            System.out.println("The names: " + service.getNames());
-            service.add("Sebastian");
-            service.add("Otavio");
-            service.add("Ada");
-            service.add("Mari");
+            Book book = Book.builder().isbn(UUID.randomUUID().toString())
+                    .author("Otavio Santana")
+                    .title("Persistence layer")
+                    .release(Year.of(2022))
+                    .build();
+
+            Book cleanCode = Book.builder().isbn(UUID.randomUUID().toString())
+                    .author("Uncle Bob")
+                    .title("Clean Code")
+                    .release(Year.of(2017))
+                    .build();
+
+            BookService service = container.select(BookService.class).get();
+
+//            service.add(book);
+//            service.add(cleanCode);
+
+            System.out.println("The result is: " + service.getBooks());
+
+
+
         }
         System.exit(0);
     }
