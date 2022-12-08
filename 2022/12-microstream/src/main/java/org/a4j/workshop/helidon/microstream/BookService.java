@@ -5,6 +5,7 @@ import one.microstream.integrations.cdi.types.Store;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
+import java.util.Objects;
 
 @ApplicationScoped
 public class BookService {
@@ -14,6 +15,7 @@ public class BookService {
 
     @Store
     public void add(Book book) {
+        Objects.requireNonNull(book, "book is required");
         this.library.add(book);
     }
 

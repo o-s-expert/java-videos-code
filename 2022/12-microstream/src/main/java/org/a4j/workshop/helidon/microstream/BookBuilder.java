@@ -3,7 +3,7 @@ package org.a4j.workshop.helidon.microstream;
 import java.time.Year;
 
 public class BookBuilder {
-    private String isbn;
+    private String id;
     private String title;
     private String author;
     private Year release;
@@ -11,8 +11,8 @@ public class BookBuilder {
     BookBuilder() {
     }
 
-    public BookBuilder isbn(String isbn) {
-        this.isbn = isbn;
+    public BookBuilder id(String id) {
+        this.id = id;
         return this;
     }
 
@@ -32,6 +32,6 @@ public class BookBuilder {
     }
 
     public Book build() {
-        return new Book(isbn, title, author, release);
+        return new Book(id, title, author, release);
     }
 }

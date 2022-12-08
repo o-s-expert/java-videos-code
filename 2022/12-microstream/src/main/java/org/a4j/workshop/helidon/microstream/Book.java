@@ -5,23 +5,23 @@ import java.util.Objects;
 
 public class Book {
 
-    private final String isbn;
+    private final String id;
 
-    private final  String title;
+    private final String title;
 
-    private final  String author;
+    private final String author;
 
-    private final  Year release;
+    private final Year release;
 
-    Book(String isbn, String title, String author, Year release) {
-        this.isbn = isbn;
+    Book(String id, String title, String author, Year release) {
+        this.id = id;
         this.title = title;
         this.author = author;
         this.release = release;
     }
 
-    public String getIsbn() {
-        return isbn;
+    public String getId() {
+        return id;
     }
 
     public String getTitle() {
@@ -45,18 +45,18 @@ public class Book {
             return false;
         }
         Book book = (Book) o;
-        return Objects.equals(isbn, book.isbn);
+        return Objects.equals(id, book.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(isbn);
+        return Objects.hashCode(id);
     }
 
     @Override
     public String toString() {
         return "Book{" +
-                "isbn='" + isbn + '\'' +
+                "id='" + id + '\'' +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", release=" + release +

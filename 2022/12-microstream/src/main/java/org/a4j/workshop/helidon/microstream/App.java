@@ -29,28 +29,26 @@ import java.util.UUID;
 
 public class App {
     public static void main(final String[] args) {
+
         try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
 
-            Book book = Book.builder().isbn(UUID.randomUUID().toString())
+            Book book  = Book.builder().id(UUID.randomUUID().toString())
+                    .title("Persistence Layer")
                     .author("Otavio Santana")
-                    .title("Persistence layer")
-                    .release(Year.of(2022))
+                    .release(Year.of(2023))
                     .build();
 
-            Book cleanCode = Book.builder().isbn(UUID.randomUUID().toString())
-                    .author("Uncle Bob")
+            Book cleanCode  = Book.builder().id(UUID.randomUUID().toString())
                     .title("Clean Code")
-                    .release(Year.of(2017))
+                    .author("Uncle Bob")
+                    .release(Year.of(2015))
                     .build();
 
             BookService service = container.select(BookService.class).get();
-
-//            service.add(book);
 //            service.add(cleanCode);
+//            service.add(book);
 
-            System.out.println("The result is: " + service.getBooks());
-
-
+            System.out.println("The result is " + service.getBooks());
 
         }
         System.exit(0);
