@@ -23,6 +23,7 @@
         <module>09-intro-rich-model</module>
         <module>10-collector</module>
         <module>11-cdi-introduction</module>
+        <module>12-microstream</module>
     </modules>
     
 </project>
