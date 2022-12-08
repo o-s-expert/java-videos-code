@@ -7,8 +7,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 
-	<groupId>org.a4j.workshop.helidon</groupId>
-    <artifactId>microstream-cdi-se</artifactId>
+    <groupId>com.osachitech.examples</groupId>
+    <artifactId>12-microstream</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-shaded</artifactId>
-            <version>3.1.8.Final</version>
+            <version>3.1.9.Final</version>
         </dependency>
         <dependency>
             <groupId>io.smallrye.config</groupId>
