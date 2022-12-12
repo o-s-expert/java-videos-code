@@ -14,4 +14,5 @@
 | [Why should we use Money-API in my code?](https://www.youtube.com/watch?v=eExql9CZkWY) | [Source](https://github.com/osarchitech/java-videos-code/tree/main/2022/08-money-api) |
 | [Avoiding the auto-destruction button in your design code](https://www.youtube.com/watch?v=r39zuhlsmGA) | [Source](https://github.com/osarchitech/java-videos-code/tree/main/2022/09-intro-rich-model) |
 | [Creating your custom statistic structure with Stream API](https://www.youtube.com/watch?v=w78fdT1PIl0) | [Source](https://github.com/osarchitech/java-videos-code/tree/main/2022/10-collector) |
+| [Introduction to Ultrafast Java application with Microstream](https://www.youtube.com/watch?v=unq6SpX_0_U) | [Source](https://github.com/osarchitech/java-videos-code/tree/main/2022/12-microstream) |
 
