@@ -47,7 +47,7 @@ public class AppCache {
             BookCache cache = container.select(BookCache.class).get();
             cache.add(book);
             cache.add(cleanCode);
-            System.out.println("The result is " + cache.getById(book.getId()));
+            System.out.println("The result is " + cache.getAuthor(book.getId()));
 
         }
         System.exit(0);

@@ -14,15 +14,15 @@ public class BookCache {
 
     @Inject
     @StorageCache
-    private Cache<String, Book> cache;
+    private Cache<String, String> cache;
 
     @Store
     public void add(Book book) {
         Objects.requireNonNull(book, "book is required");
-        this.cache.put(book.getId(), book);
+        this.cache.put(book.getId(), book.getAuthor());
     }
 
-    public Optional<Book> getById(String id) {
+    public Optional<String> getAuthor(String id) {
         Objects.requireNonNull(id, "id is required");
         return Optional.ofNullable(this.cache.get(id));
     }
