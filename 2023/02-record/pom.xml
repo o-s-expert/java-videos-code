@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>expert.os.examples</groupId>
-    <artifactId>01-documentation</artifactId>
+    <artifactId>02-record</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>enum-advanced</name>
+    <name>02-record</name>
     <url>http://www.os.com</url>
 
     <properties>
