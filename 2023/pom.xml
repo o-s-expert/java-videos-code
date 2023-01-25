@@ -12,18 +12,7 @@
     <description>The code result from the youtube channel on 2022</description>
 
     <modules>
-        <module>01-enum-advanced</module>
-        <module>02-three-states</module>
-        <module>03-optimizing-optional</module>
-        <module>04-encapsulation</module>
-        <module>05-builder-fluent-api</module>
-        <module>06-functions-composite</module>
-        <module>07-interface</module>
-        <module>08-money-api</module>
-        <module>09-intro-rich-model</module>
-        <module>10-collector</module>
-        <module>11-cdi-introduction</module>
-        <module>12-microstream</module>
+        <module>01-documentation</module>
     </modules>
     
 </project>
