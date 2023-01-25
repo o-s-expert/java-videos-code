@@ -23,5 +23,15 @@ class BookTest {
                 Year.of(2001), -1));
     }
 
+    @Test
+    public void shouldTitle() {
+        Book book = new Book("id", "Effective Java", Year.of(2001), 1);
+        System.out.println(book.title());
+    }
+
+    @Test
+    public void shouldCreateFromBuilder() {
+        Book book = Book.builder().id("id").title("Effective Java").release(Year.of(2001)).builder();
+    }
 
 }

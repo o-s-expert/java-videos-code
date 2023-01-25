@@ -15,10 +15,6 @@ public record Book(String id, String title, Year release, int edition) {
         }
     }
 
-    @Override
-    public String title() {
-        return title + release;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -35,6 +31,10 @@ public record Book(String id, String title, Year release, int edition) {
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
+    }
+
+    public static BookBuilder builder() {
+        return new BookBuilder();
     }
 
 }
