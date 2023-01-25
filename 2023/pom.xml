@@ -13,6 +13,7 @@
 
     <modules>
         <module>01-documentation</module>
+        <module>02-record</module>
     </modules>
     
 </project>
