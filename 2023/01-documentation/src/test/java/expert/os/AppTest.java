@@ -1,9 +1,9 @@
-package com.osachitech.examples;
+package expert.os;
 
 
-import com.osachitech.examples.function.Operation;
-import com.osachitech.examples.strategy.Cook;
-import com.osachitech.examples.strategy.Cooks;
+import expert.os.function.Operation;
+import expert.os.strategy.Cook;
+import expert.os.strategy.Cooks;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

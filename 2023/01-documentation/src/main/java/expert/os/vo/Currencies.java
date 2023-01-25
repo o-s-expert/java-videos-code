@@ -1,4 +1,4 @@
-package com.osachitech.examples.vo;
+package expert.os.vo;
 
 import javax.money.CurrencyUnit;
 import javax.money.Monetary;

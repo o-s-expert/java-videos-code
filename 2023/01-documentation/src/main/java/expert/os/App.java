@@ -1,4 +1,4 @@
-package com.osachitech.examples;
+package expert.os;
 
 /**
  * Hello world!

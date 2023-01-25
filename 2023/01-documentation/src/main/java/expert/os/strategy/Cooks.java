@@ -1,4 +1,4 @@
-package com.osachitech.examples.strategy;
+package expert.os.strategy;
 
 public enum Cooks implements Cook {
 

@@ -1,4 +1,4 @@
-package com.osachitech.examples.vo;
+package expert.os.vo;
 
 import java.util.function.Supplier;
 

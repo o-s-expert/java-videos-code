@@ -1,4 +1,4 @@
-package com.osachitech.examples.singleton;
+package expert.os.singleton;
 
 import java.util.Objects;
 

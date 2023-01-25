@@ -1,4 +1,4 @@
-package com.osachitech.examples.function;
+package expert.os.function;
 
 public enum Operation {
 
