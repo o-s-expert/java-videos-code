@@ -5,3 +5,6 @@
 
 * What is record?
 * Why record?
+* DTO
+* Immutable entities
+* State

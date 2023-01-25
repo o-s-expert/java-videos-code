@@ -1,4 +1,4 @@
-package expert.os;
+package expert.os.examples;
 
 
 import org.junit.jupiter.api.Test;
