@@ -1,0 +1,25 @@
+= Changelog
+:toc: auto
+
+All notable changes to this project will be documented in this file.
+
+The format is based on https://keepachangelog.com/en/1.0.0/[Keep a Changelog],
+and this project adheres to https://semver.org/spec/v2.0.0.html[Semantic Versioning].
+
+== [Unreleased]
+
+=== Added
+- Create
+
+=== Changed
+
+- Changed
+
+=== Removed
+
+- Remove
+
+=== Fixed
+- Ops, fixed
+
+== [old-version] - 2022-08-04
