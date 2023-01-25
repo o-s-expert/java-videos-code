@@ -1,0 +1,30 @@
+= Project Name
+:toc: auto
+
+== Introduction
+
+A paragraph that explains the "why" or reason for this project exists.
+
+== Goals
+
+* The goals on bullets
+* The second goal
+
+== Getting Started
+
+Your reader gets into here; they need to know how to use and install it.
+
+== The API overview
+
+The coolest features here
+
+== To know more
+
+More references such as books, articles, videos, and so on.
+
+
+== Samples
+
+* https://github.com/spring-projects/spring-data-commons[Spring data commons]
+* https://github.com/eclipse/jnosql[JNoSQL]
+* https://github.com/xmolecules/jmolecules[jmolecules]
