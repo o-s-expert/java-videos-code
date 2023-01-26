@@ -37,7 +37,7 @@ class BookTest {
     @Test
     public void shouldCreateNewEdition() {
         Book first = Book.builder().id("id").title("Effective Java").release(Year.of(2001)).builder();
-        Book second = first.newEdition("id-2", Year.of(2005));
+        Book second = first.newEdition("id-2", Year.of(2009));
         Assertions.assertNotNull(second);
         Assertions.assertEquals(first.title(), second.title());
         Assertions.assertNotEquals(first.id(), second.id());
