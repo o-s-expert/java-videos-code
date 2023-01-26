@@ -15,6 +15,11 @@ public record Book(String id, String title, Year release, int edition) {
         }
     }
 
+    public Book newEdition(String id, Year year) {
+        Objects.requireNonNull(id, "id is required");
+        Objects.requireNonNull(year, "year is required");
+        new Book(id, this.title, year, (edition + 1));
+    }
 
     @Override
     public boolean equals(Object o) {
