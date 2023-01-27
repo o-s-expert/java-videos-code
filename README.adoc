@@ -1,14 +1,66 @@
 = Java videos code
+:toc: auto
 
 Several tips about Java, Clean code, architecture.
 
 Those videos are on: 
 https://www.youtube.com/c/OtavioSantana
 
+== 2023
 
+== 2022
 
-== Years
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Video |Source
+|https://www.youtube.com/watch?v=ZSDwPdL74BI[The Power of Enum - Take
+advantage of it to make your code more readable and efficient]
+|link:2022/01-enum-advanced[Source]
 
+== 2022
 
+[width="100%",cols="50%,50%",options="header",]
+|===
+|Video |Source
+|https://www.youtube.com/watch?v=ZSDwPdL74BI[The Power of Enum - Take
+advantage of it to make your code more readable and efficient]
+|link:2022/01-enum-advanced[Source]
 
-* link:2022[2022]
+|https://www.youtube.com/watch?v=q-dRtCUhpd8[Goodbye&#44; three-state
+Boolean! Learn how to do a better design] |link:2022/02-three-states[Source]
+
+|https://www.youtube.com/watch?v=Bh0vsvzvXno[Optional in Java - When
+better code is not an alternative] |link:2022/03-optimizing-optional[Source]
+
+|https://www.youtube.com/watch?v=n9UN5IG7Pn0[Java’s Encapsulation - When
+the getter and setter became your enemy] |link:2022/04-encapsulation[Source]
+
+|https://www.youtube.com/watch?v=m6DmH9EwBis[Builder Pattern and
+Fluent-API - how to create complex objects with Java]
+|link:2022/05-builder-fluent-api[Source]
+
+|https://www.youtube.com/watch?v=GapuPKdmCgE[Applying Composite patterns
+in your Java functional interfaces]
+|https://github.com/osarchitech/java-videos-code/tree/main/2022/06-functions-composite[Source]
+
+|https://www.youtube.com/watch?v=V0wQVpLyLVM[Exploring the features in
+the Java interfaces]
+|https://github.com/osarchitech/java-videos-code/tree/main/2022/07-interface[Source]
+
+|https://www.youtube.com/watch?v=eExql9CZkWY[Why should we use Money-API
+in my code?]
+|https://github.com/osarchitech/java-videos-code/tree/main/2022/08-money-api[Source]
+
+|https://www.youtube.com/watch?v=r39zuhlsmGA[Avoiding the
+auto-destruction button in your design code]
+|https://github.com/osarchitech/java-videos-code/tree/main/2022/09-intro-rich-model[Source]
+
+|https://www.youtube.com/watch?v=w78fdT1PIl0[Creating your custom
+statistic structure with Stream API]
+|https://github.com/osarchitech/java-videos-code/tree/main/2022/10-collector[Source]
+
+|https://www.youtube.com/watch?v=unq6SpX_0_U[Introduction to Ultrafast
+Java application with Microstream]
+|https://github.com/osarchitech/java-videos-code/tree/main/2022/12-microstream[Source]
+|===
+
