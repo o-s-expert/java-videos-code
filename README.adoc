@@ -12,12 +12,11 @@ https://www.youtube.com/c/OtavioSantana
 |===
 |Video |Source
 
-|https://www.youtube.com/watch?v=ZSDwPdL74BI[The Power of Enum - Take
-advantage of it to make your code more readable and efficient]
+|https://www.youtube.com/watch?v=eFjuJ6SwGkw[The three Documentation types that are crucial to a source repository]
 |link:2023/01-documentation/[Source]
 
-|https://www.youtube.com/watch?v=ZSDwPdL74BI[The Power of Enum - Take
-advantage of it to make your code more readable and efficient]
+|https://www.youtube.com/watch?v=SPfPOgMOgSw[Record, exploring the feature beyond the DTO
+]
 |link:2023/02-record/[Source]
 |===
 
