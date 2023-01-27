@@ -11,9 +11,15 @@ https://www.youtube.com/c/OtavioSantana
 [width="100%",cols="50%,50%",options="header",]
 |===
 |Video |Source
+
 |https://www.youtube.com/watch?v=ZSDwPdL74BI[The Power of Enum - Take
 advantage of it to make your code more readable and efficient]
-|link:2022/01-enum-advanced[Source]
+|link:2023/01-documentation/[Source]
+
+|https://www.youtube.com/watch?v=ZSDwPdL74BI[The Power of Enum - Take
+advantage of it to make your code more readable and efficient]
+|link:2023/02-record/[Source]
+|===
 
 == 2022
 
