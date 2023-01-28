@@ -43,6 +43,8 @@ public record Team(String name, List<Player> players) {
      * @throws IllegalArgumentException when it has more than eleven players.
      */
     public void add(Player player) {
+        Objects.requireNonNull(player, "player is required");
+        this.players.add(player);
 
     }
     public boolean isEmpty() {
