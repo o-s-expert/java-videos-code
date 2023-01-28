@@ -1,10 +1,14 @@
-= Project Name
+= Documentation and test
 :toc: auto
 
-== Record beyond Record
+== Java Docs
 
-* What is record?
-* Why record?
-* DTO
-* Immutable entities
-* State
+- @param
+- @throws
+- @version
+- @author
+
+
+=== References
+
+- https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html
