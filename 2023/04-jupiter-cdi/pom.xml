@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>expert.os.examples</groupId>
-    <artifactId>03-java-doc-test</artifactId>
+    <artifactId>04-jupiter-cdi</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>03-java-doc-test</name>
+    <name>04-jupiter-cdi</name>
     <url>http://www.os.expert</url>
 
     <properties>
