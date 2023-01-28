@@ -56,7 +56,7 @@ public class Player {
         Objects.requireNonNull(name, "name is required");
         Objects.requireNonNull(city, "city is required");
 
-        if(score < 1) {
+        if(score < 0) {
             throw new IllegalStateException("A player cannot have negative score");
         }
         return new Player(name, city, score);

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.Collection;
 import java.util.List;
@@ -49,6 +50,14 @@ class TeamTest {
         Assertions.assertThrows(OverTeamException.class, () ->
                 bahia.add(Player.of("Otavio", "Salvador", 0)
                 ));
+
+    }
+
+    @ParameterizedTest(name = "Should create a team {0}")
+    @ValueSource(strings = {"Bahia", "Santos"})
+    public void shouldCreateTeam(String name) {
+        Team team = Team.of(name);
+        Assertions.assertNotNull(team);
 
     }
 
