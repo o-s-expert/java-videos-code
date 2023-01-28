@@ -7,6 +7,8 @@ import java.util.Objects;
 
 public record Team(String name, List<Player> players) {
 
+    private static final int TEAM_SIZE = 11;
+
     /**
      * Creates a team
      * @param name the team's name that is valid to FIFA
@@ -40,10 +42,13 @@ public record Team(String name, List<Player> players) {
      * Add a new {@link Player} on the team
      * @param player the player
      * @throws NullPointerException when player is null
-     * @throws IllegalArgumentException when it has more than eleven players.
+     * @throws OverTeamException when it has more than eleven players.
      */
     public void add(Player player) {
         Objects.requireNonNull(player, "player is required");
+        if(this.players.size() == TEAM_SIZE) {
+            throw new OverTeamException("We don't support one more player");
+        }
         this.players.add(player);
 
     }
