@@ -18,9 +18,9 @@ class InventoryTest {
     @Inject
     private Inventory inventory;
 
-//    @Produces
-//    @ExcludeBean
-//    private Payment payment = new PaymentMock();
+    @Produces
+    @ExcludeBean
+    private Payment payment = new PaymentMock();
 
     @Test
     public void shouldBy() {
