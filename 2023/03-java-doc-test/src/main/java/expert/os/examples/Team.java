@@ -55,4 +55,9 @@ public record Team(String name, List<Player> players) {
     public boolean isEmpty() {
         return this.players.isEmpty();
     }
+
+    public int score() {
+        return players.stream().mapToInt(Player::score)
+                .sum();
+    }
 }

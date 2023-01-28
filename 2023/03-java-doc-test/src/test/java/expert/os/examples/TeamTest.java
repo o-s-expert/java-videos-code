@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -59,6 +60,15 @@ class TeamTest {
         Team team = Team.of(name);
         Assertions.assertNotNull(team);
 
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(PlayersProvider.class)
+    public void shouldShouldTotalScore(List<Player> players) {
+        Team team = Team.of("Leiria");
+        players.forEach(team::add);
+        int score = team.score();
+        Assertions.assertEquals(20, score);
     }
 
     static Collection<Arguments> players() {
