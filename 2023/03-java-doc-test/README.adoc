@@ -1,0 +1,10 @@
+= Project Name
+:toc: auto
+
+== Record beyond Record
+
+* What is record?
+* Why record?
+* DTO
+* Immutable entities
+* State
