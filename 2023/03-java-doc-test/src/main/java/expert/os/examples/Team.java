@@ -1,5 +1,6 @@
 package expert.os.examples;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -12,11 +13,23 @@ public record Team(String name, List<Player> players) {
      * @param players the players of the time that should not be higher the eleven.
      * @throws NullPointerException when name or players are null
      * @throws IllegalArgumentException when it has more than eleven players
+     * @deprecated please use {@link Team#of(String)} instead
      */
     public Team{
         Objects.requireNonNull(name, "name is required");
         Objects.requireNonNull(players, "players is required");
     }
+
+    /**
+     * Create an empty team
+     * @param name the team's name.
+     * @return a {@link Team} instance
+     */
+    public static Team of(String name) {
+        return new Team(Objects.requireNonNull(name, "name is required")
+                , new ArrayList<>());
+    }
+
 
     @Override
     public List<Player> players() {
@@ -31,5 +44,8 @@ public record Team(String name, List<Player> players) {
      */
     public void add(Player player) {
 
+    }
+    public boolean isEmpty() {
+        return this.players.isEmpty();
     }
 }
