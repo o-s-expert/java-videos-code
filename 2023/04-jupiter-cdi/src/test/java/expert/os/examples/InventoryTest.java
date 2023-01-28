@@ -3,6 +3,7 @@ package expert.os.examples;
 import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Inject;
 import org.jboss.weld.junit5.auto.AddPackages;
+import org.jboss.weld.junit5.auto.EnableAlternatives;
 import org.jboss.weld.junit5.auto.EnableAutoWeld;
 import org.jboss.weld.junit5.auto.ExcludeBean;
 import org.junit.jupiter.api.Test;
@@ -11,14 +12,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @EnableAutoWeld
 @AddPackages(Inventory.class)
+@EnableAlternatives(PaymentMock.class)
 class InventoryTest {
 
     @Inject
     private Inventory inventory;
 
-    @Produces
-    @ExcludeBean
-    private Payment payment = new PaymentMock();
+//    @Produces
+//    @ExcludeBean
+//    private Payment payment = new PaymentMock();
 
     @Test
     public void shouldBy() {

@@ -1,8 +1,16 @@
 package expert.os.examples;
 
-public class PaymentMock implements Payment{
+import jakarta.annotation.Priority;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Alternative;
+import jakarta.interceptor.Interceptor;
+
+@ApplicationScoped
+@Alternative
+@Priority(Interceptor.Priority.APPLICATION)
+public class PaymentMock implements Payment {
     @Override
     public void buy(Product product) {
-        System.out.println("Using the test env " + product);
+        System.out.println("Overwriting on the test scope" + product);
     }
 }
