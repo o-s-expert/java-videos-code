@@ -54,4 +54,8 @@ public class Pet {
                 ", age=" + age +
                 '}';
     }
+
+    public static Pet of(String name, int age) {
+        return new Pet(name, age);
+    }
 }
