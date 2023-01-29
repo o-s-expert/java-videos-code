@@ -16,6 +16,7 @@
         <module>02-record</module>
         <module>03-java-doc-test</module>
         <module>04-jupiter-cdi</module>
+        <module>05-reflections</module>
     </modules>
     
 </project>
