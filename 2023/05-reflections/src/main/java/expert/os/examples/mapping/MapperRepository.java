@@ -11,7 +11,7 @@ public interface MapperRepository {
     static MapperRepository repository() {
         return (MapperRepository) Proxy.newProxyInstance(
                 MapperRepository.class.getClassLoader(),
-                new Class[] { Map.class },
+                new Class[] { MapperRepository.class },
                 new MapperInvocationHandler());
     }
 }
