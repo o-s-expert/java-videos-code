@@ -35,6 +35,11 @@ public class ReflectionMapper implements Mapper {
 
         }
 
+        Append[] appends = type.getAnnotationsByType(Append.class);
+        for (Append append : appends) {
+            map.put(append.key(), append.value());
+        }
+
         return map;
     }
 

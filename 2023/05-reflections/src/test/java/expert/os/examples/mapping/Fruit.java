@@ -7,4 +7,17 @@ public class Fruit {
 
     @Column
     private String name;
+
+
+    public Fruit(String name) {
+        this.name = name;
+    }
+
+    @Deprecated
+    public Fruit() {
+    }
+
+    public String name() {
+        return name;
+    }
 }

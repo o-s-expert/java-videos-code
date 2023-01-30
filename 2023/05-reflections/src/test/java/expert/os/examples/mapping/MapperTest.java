@@ -45,4 +45,17 @@ class MapperTest {
                 .matches(p -> p.age() == 8);
     }
 
+
+    @Test
+    public void shouldConvertEntityRepeatable() {
+        Fruit fruit = new Fruit("Banana");
+        Map<String, Object> map = this.mapper.toMap(fruit);
+
+        assertThat(map).isNotNull().isNotEmpty()
+                .containsEntry("type", "Fruit")
+                .containsEntry("category", "Natural")
+                .containsEntry("name", "Banana")
+                .containsEntry("_entity", Fruit.class.getName());
+    }
+
 }
