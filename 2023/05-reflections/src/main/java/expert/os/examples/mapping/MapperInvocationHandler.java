@@ -4,7 +4,6 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.Objects;
-import java.util.logging.Logger;
 
 final class MapperInvocationHandler implements InvocationHandler {
 
