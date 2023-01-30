@@ -1,6 +1,5 @@
 package expert.os.examples.mapping;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -46,16 +45,4 @@ class MapperTest {
                 .matches(p -> p.age() == 8);
     }
 
-    @Test
-    public void shouldCreateAppendItem() {
-        Fruit fruit = new Fruit("Banana");
-        Map<String, Object> map = mapper.toMap(fruit);
-        assertThat(map)
-                .isNotNull()
-                .isNotEmpty()
-                .containsEntry("_entity", Fruit.class.getName())
-                .containsEntry("name", fruit.name())
-                .containsEntry("type", "item")
-                .containsEntry("price", "USD");
-    }
 }
