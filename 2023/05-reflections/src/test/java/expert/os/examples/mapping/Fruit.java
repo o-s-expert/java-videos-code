@@ -1,29 +1,10 @@
 package expert.os.examples.mapping;
 
-
 @Entity
-@Append(key = "type", value = "item")
-@Append(key = "price", value = "USD")
+@Append(key = "type", value = "Fruit")
+@Append(key = "category", value = "Natural")
 public class Fruit {
 
     @Column
     private String name;
-
-    public Fruit() {
-    }
-
-    public Fruit(String name) {
-        this.name = name;
-    }
-
-    public String name() {
-        return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }
