@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 class MapperTest {
 
@@ -23,7 +23,7 @@ class MapperTest {
         Pet ada = Pet.of("Ada", 8);
         Map<String, Object> map = mapper.toMap(ada);
 
-        Assertions.assertThat(map)
+        assertThat(map)
                 .isNotNull()
                 .isNotEmpty()
                 .containsKeys("_entity", "name", "age")
@@ -40,9 +40,22 @@ class MapperTest {
 
         Pet pet = mapper.toEntity(map);
 
-        Assertions.assertThat(pet).isNotNull()
+        assertThat(pet).isNotNull()
                 .isInstanceOf(Pet.class)
                 .matches(p -> p.name().equals("Ada"))
                 .matches(p -> p.age() == 8);
+    }
+
+    @Test
+    public void shouldCreateAppendItem() {
+        Fruit fruit = new Fruit("Banana");
+        Map<String, Object> map = mapper.toMap(fruit);
+        assertThat(map)
+                .isNotNull()
+                .isNotEmpty()
+                .containsEntry("_entity", Fruit.class.getName())
+                .containsEntry("name", fruit.name())
+                .containsEntry("type", "item")
+                .containsEntry("price", "USD");
     }
 }

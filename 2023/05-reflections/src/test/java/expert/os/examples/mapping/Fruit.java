@@ -4,12 +4,15 @@ package expert.os.examples.mapping;
 @Entity
 @Append(key = "type", value = "item")
 @Append(key = "price", value = "USD")
-public class Item {
+public class Fruit {
 
     @Column
     private String name;
 
-    public Item(String name) {
+    public Fruit() {
+    }
+
+    public Fruit(String name) {
         this.name = name;
     }
 
