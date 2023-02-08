@@ -10,7 +10,8 @@ public record Team(String name, List<Player> players) {
     private static final int TEAM_SIZE = 11;
 
     /**
-     * Creates a team
+     * Once, we don't change the team during the championship, we'll create using record to make it immutable.
+     *
      * @param name the team's name that is valid to FIFA
      * @param players the players of the time that should not be higher the eleven.
      * @throws NullPointerException when name or players are null
