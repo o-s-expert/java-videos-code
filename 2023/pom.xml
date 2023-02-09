@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.osachitech.examples</groupId>
-    <artifactId>java-videos-code-2022</artifactId>
+    <artifactId>java-videos-code-2023</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>java-videos-code-2022</name>
+    <name>java-videos-code-2023</name>
     <url>http://www.osachitech.com</url>
     <description>The code result from the youtube channel on 2022</description>
 
