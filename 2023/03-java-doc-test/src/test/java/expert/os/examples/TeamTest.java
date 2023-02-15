@@ -35,7 +35,7 @@ class TeamTest {
 
     @ParameterizedTest
     @MethodSource("players")
-    public void shouldCreatePlayer(Player player) {
+    public void shouldCreateTeamWithAPlayer(Player player) {
         Assertions.assertNotNull(player);
         Team bahia = Team.of("Bahia");
         bahia.add(player);
