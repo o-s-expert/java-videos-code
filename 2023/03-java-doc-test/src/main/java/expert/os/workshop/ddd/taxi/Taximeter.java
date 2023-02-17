@@ -26,7 +26,7 @@ public class Taximeter {
 
 
     private MonetaryAmount flag(LocalTime time) {
-        if (START_ECONOMIC.isAfter(time) && END_ECONOMIC.isAfter(END_ECONOMIC)) {
+        if (START_ECONOMIC.isAfter(time) && END_ECONOMIC.isBefore(END_ECONOMIC)) {
             return ECONOMIC;
         }
         return EXPENSIVE;
