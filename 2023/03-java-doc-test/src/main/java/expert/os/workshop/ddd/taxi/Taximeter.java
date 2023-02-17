@@ -1,9 +1,11 @@
 package expert.os.workshop.ddd.taxi;
 
+import javax.money.MonetaryAmount;
+
 public class Taximeter {
 
 
-    public Money fare(Ride ride) {
+    public MonetaryAmount fare(Ride ride) {
         throw new IllegalArgumentException();
     }
 
