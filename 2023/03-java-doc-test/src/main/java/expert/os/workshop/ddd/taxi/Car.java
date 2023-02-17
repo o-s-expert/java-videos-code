@@ -1,4 +1,6 @@
 package expert.os.workshop.ddd.taxi;
 
-public class Car {
+import java.time.Year;
+
+public record Car(String plate, Year year, String model) {
 }

@@ -1,10 +1,4 @@
 package expert.os.workshop.ddd.taxi;
 
-public class Ride {
-
-    private String departure;
-
-    private String destination;
-
-
+public record Ride (String departure, String destination, int distance) {
 }
