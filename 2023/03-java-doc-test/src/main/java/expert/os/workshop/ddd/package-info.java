@@ -5,4 +5,4 @@
  * @version 0.0.1
  * @since
  */
-package expert.os.examples;
+package expert.os.workshop.ddd;

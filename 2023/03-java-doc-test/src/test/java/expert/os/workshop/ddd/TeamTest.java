@@ -1,4 +1,4 @@
-package expert.os.examples;
+package expert.os.workshop.ddd;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

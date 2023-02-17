@@ -1,4 +1,4 @@
-package expert.os.examples;
+package expert.os.workshop.ddd;
 
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;

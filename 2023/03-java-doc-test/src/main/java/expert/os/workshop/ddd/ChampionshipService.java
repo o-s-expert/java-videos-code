@@ -1,4 +1,4 @@
-package expert.os.examples;
+package expert.os.workshop.ddd;
 
 public class ChampionshipService {
 

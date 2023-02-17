@@ -1,4 +1,4 @@
-package expert.os.examples;
+package expert.os.workshop.ddd;
 
 import java.util.Objects;
 
