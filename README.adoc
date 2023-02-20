@@ -18,6 +18,18 @@ https://www.youtube.com/c/OtavioSantana
 |https://www.youtube.com/watch?v=SPfPOgMOgSw[Record, exploring the feature beyond the DTO
 ]
 |link:2023/02-record/[Source]
+
+|https://www.youtube.com/watch?v=eFjuJ6SwGkw[The three Documentation types that are crucial to a source repository]
+|link:2023/03-java-doc-test/[Source]
+
+|https://www.youtube.com/watch?v=W3DAByT4MM4[Increase your code quality in Java exploring the power of JavaDoc]
+|link:2023/03-java-doc-test/[Source]
+
+|https://www.youtube.com/watch?v=hrM6xtrfBKU[Creating your Swiss army knife on Java Test Stack]
+|link:2023/03-java-doc-test/[Source]
+
+|https://www.youtube.com/watch?v=H7-lUhRrOZo[Readability in the test exploring the JUnit-params]
+|link:2023/03-java-doc-test/[Source]
 |===
 
 == 2022
