@@ -30,6 +30,13 @@ https://www.youtube.com/c/OtavioSantana
 
 |https://www.youtube.com/watch?v=H7-lUhRrOZo[Readability in the test exploring the JUnit-params]
 |link:2023/03-java-doc-test/[Source]
+
+|https://www.youtube.com/watch?v=Z83d8TFViMg[https://www.youtube.com/watch?v=Z83d8TFViMg]
+|link:2023/05-reflections/[Source]
+
+|https://www.youtube.com/watch?v=yxKFP6KETSc[Java Reflection Advanced with Proxy: Creating a more robust code design]
+|link:2023/05-reflections/[Source]
+
 |===
 
 == 2022
