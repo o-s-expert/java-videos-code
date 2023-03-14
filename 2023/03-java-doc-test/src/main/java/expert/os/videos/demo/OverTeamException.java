@@ -1,4 +1,4 @@
-package expert.os.workshop.ddd.taxi;
+package expert.os.videos.demo;
 
 public class OverTeamException extends RuntimeException{
     public OverTeamException(String message) {
