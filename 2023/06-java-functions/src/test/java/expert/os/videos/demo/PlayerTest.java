@@ -55,5 +55,24 @@ public class PlayerTest {
                 .containsExactly(neymar, ronaldo, messi);
     }
 
+    @Test
+    public void shouldUseMultipleComparators() {
+        Player neymar = new Player("Neymar", "Santos", 10);
+        Player ronaldo = new Player("Ronaldo", "Lisbon", 15);
+        Player messi = new Player("Messi", "Buenos Aires", 10);
+
+        List<Player> team = List.of(neymar, ronaldo, messi);
+
+
+        Comparator<Player> orderByScore = Comparator.comparing(Player::score).reversed();
+
+        List<Player> players = team.stream().sorted(orderByScore.thenComparing(Player::city))
+                .collect(Collectors.toUnmodifiableList());
+
+        Assertions.assertThat(players)
+                .containsExactly(ronaldo, messi, neymar);
+
+    }
+
 
 }
