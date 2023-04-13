@@ -19,6 +19,7 @@
         <module>05-reflections</module>
         <module>06-java-functions</module>
         <module>07-archi-unit</module>
+        <module>08-java-design</module>
     </modules>
     
 </project>
