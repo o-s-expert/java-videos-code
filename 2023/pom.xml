@@ -18,6 +18,7 @@
         <module>04-jupiter-cdi</module>
         <module>05-reflections</module>
         <module>06-java-functions</module>
+        <module>07-archi-unit</module>
     </modules>
     
 </project>
