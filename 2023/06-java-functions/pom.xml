@@ -104,7 +104,7 @@
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
 <!--                    <groups>consumer</groups>-->
-                    <excludedGroups>consumer</excludedGroups>
+<!--                    <excludedGroups>consumer</excludedGroups>-->
                 </configuration>
             </plugin>
         </plugins>
