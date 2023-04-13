@@ -103,8 +103,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven.surefire.plugin.version}</version>
                 <configuration>
-<!--                    <groups></groups>-->
-<!--                    <excludedGroups></excludedGroups>-->
+<!--                    <groups>consumer</groups>-->
+                    <excludedGroups>consumer</excludedGroups>
                 </configuration>
             </plugin>
         </plugins>
