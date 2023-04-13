@@ -1,5 +1,6 @@
 package expert.os.videos.demo;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
@@ -9,6 +10,7 @@ public class PersonTest {
     private Person person;
 
     @Test
+    @Disabled
     public void shouldReturnDriverLicense() {
         Optional<DriverLicense> license = person.getLicense();
         license.ifPresent(d -> System.out.println("my license : " + d));

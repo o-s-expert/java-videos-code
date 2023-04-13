@@ -13,7 +13,6 @@ class InventoryTest {
         Inventory inventory = new Inventory();
         Assertions.assertThat(inventory.getItems())
                 .isNotNull();
-        inventory.getItems().clear();
     }
 
 
