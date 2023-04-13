@@ -22,4 +22,18 @@ public class MyArchTest {
 
         rule.check(importedClasses);
     }
+
+    @Test
+    public void shouldNotHaveEntityInfrastructure() {
+        JavaClasses importedClasses = new ClassFileImporter()
+                .importPackages(MyArchTest.class.getPackageName());
+
+
+        ArchRule rule = ArchRuleDefinition
+                .noClasses()
+                .that().areAnnotatedWith(Entity.class)
+                .should().resideInAPackage("..infrastructure..");
+
+        rule.check(importedClasses);
+    }
 }
