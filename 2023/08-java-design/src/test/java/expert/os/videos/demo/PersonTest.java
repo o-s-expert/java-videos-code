@@ -1,5 +1,7 @@
 package expert.os.videos.demo;
 
+import expert.os.videos.demo.sample.DriverLicense;
+import expert.os.videos.demo.sample.Person;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 

@@ -1,4 +1,4 @@
-package expert.os.videos.demo;
+package expert.os.videos.demo.sample;
 
 import java.util.ArrayList;
 import java.util.Collections;
