@@ -1,4 +1,4 @@
-package expert.os.videos.demo;
+package expert.os.videos.demo.sample;
 
 import expert.os.videos.demo.sample.DriverLicense;
 import expert.os.videos.demo.sample.Person;
