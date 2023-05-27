@@ -2,6 +2,7 @@ package expert.os.examples.mapping;
 
 import java.lang.reflect.Proxy;
 import java.util.Map;
+import java.util.Objects;
 
 public interface MapperRepository {
 
@@ -9,8 +10,12 @@ public interface MapperRepository {
 
     <T> Map<String, Object> map(T entity);
 
-    default <T> T wraper(Map<String, Object> map) {
-        map.put("version", 1);
+    default <T> T incrementAge(Map<String, Object> map) {
+        Objects.requireNonNull(map, "map is required");
+        map.computeIfPresent("age", (k, v) -> {
+            Integer age = (Integer) v;
+            return ++age;
+        });
         return this.entity(map);
     }
 
