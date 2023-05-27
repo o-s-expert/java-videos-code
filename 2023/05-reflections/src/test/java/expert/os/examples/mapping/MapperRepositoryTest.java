@@ -40,4 +40,18 @@ class MapperRepositoryTest {
                 .matches(p -> p.age() == 8);
     }
 
+    @Test
+    public void shouldUseAlias() {
+
+        Map<String, Object> map = Map.of("_entity", Pet.class.getName()
+                , "name", "Ada", "age", 8);
+
+        Pet pet = repository.wraper(map);
+
+        assertThat(pet).isNotNull()
+                .isInstanceOf(Pet.class)
+                .matches(p -> p.name().equals("Ada"))
+                .matches(p -> p.age() == 8);
+    }
+
 }
