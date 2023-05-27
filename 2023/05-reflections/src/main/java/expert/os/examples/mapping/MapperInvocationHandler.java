@@ -21,6 +21,9 @@ public class MapperInvocationHandler implements InvocationHandler {
                 Objects.requireNonNull(entity, "entity is required");
                 return mapper.toMap(entity);
         }
-        return null;
+        if(method.isDefault()) {
+            return InvocationHandler.invokeDefault(proxy, method, params);
+        }
+        throw new UnsupportedOperationException("The proxy is not supported to the method: " + method);
     }
 }
