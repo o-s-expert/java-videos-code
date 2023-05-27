@@ -46,12 +46,12 @@ class MapperRepositoryTest {
         Map<String, Object> map = Map.of("_entity", Pet.class.getName()
                 , "name", "Ada", "age", 8);
 
-        Pet pet = repository.wraper(map);
+        Pet pet = repository.incrementAge(map);
 
         assertThat(pet).isNotNull()
                 .isInstanceOf(Pet.class)
                 .matches(p -> p.name().equals("Ada"))
-                .matches(p -> p.age() == 8);
+                .matches(p -> p.age() == 9);
     }
 
 }
