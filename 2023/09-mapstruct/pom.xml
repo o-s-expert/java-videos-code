@@ -5,11 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>expert.os.examples</groupId>
-    <artifactId>02-record</artifactId>
+    <artifactId>09-mapstruct</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>02-record</name>
-    <url>http://www.os.com</url>
+    <name>09-mapstruct</name>
+    <url>http://www.os.expert</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
