@@ -3,20 +3,21 @@ package expert.os.examples;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 class DeliveryMapperTest {
-
-
 
     private DeliveryMapper mapper;
 
-
     @BeforeEach
-    void setUp() {
-        this.mapper = DeliveryMapper.INSTANCE;
+    public void set() {
+        this.mapper = Mappers.getMapper(DeliveryMapper.class);
     }
 
     @Test
@@ -25,6 +26,7 @@ class DeliveryMapperTest {
                 LocalDate.now(), "Salvador", "Brazil");
 
         DeliveryDTO dto = this.mapper.toDTO(delivery);
+
         SoftAssertions.assertSoftly(soft -> {
             soft.assertThat(dto).isNotNull();
             soft.assertThat(dto.city()).isEqualTo(delivery.getCity());

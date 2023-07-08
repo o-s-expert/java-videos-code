@@ -6,12 +6,13 @@ import java.util.UUID;
 
 public class Delivery {
 
+    private UUID trackId;
 
-   private UUID trackId;
+    private LocalDate when;
 
-   private LocalDate when;
-  private String city;
-  private String country;
+    private String city;
+
+    private String country;
 
     public Delivery(UUID trackId, LocalDate when, String city, String country) {
         this.trackId = trackId;
@@ -24,28 +25,28 @@ public class Delivery {
         return trackId;
     }
 
-    public LocalDate getWhen() {
-        return when;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
     public void setTrackId(UUID trackId) {
         this.trackId = trackId;
+    }
+
+    public LocalDate getWhen() {
+        return when;
     }
 
     public void setWhen(LocalDate when) {
         this.when = when;
     }
 
+    public String getCity() {
+        return city;
+    }
+
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
     }
 
     public void setCountry(String country) {
@@ -67,5 +68,15 @@ public class Delivery {
     @Override
     public int hashCode() {
         return Objects.hashCode(trackId);
+    }
+
+    @Override
+    public String toString() {
+        return "Delivery{" +
+                "trackId=" + trackId +
+                ", when=" + when +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                '}';
     }
 }
