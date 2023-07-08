@@ -26,9 +26,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.javamoney.moneta</groupId>
-            <artifactId>moneta-core</artifactId>
-            <version>1.4.2</version>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>3.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
