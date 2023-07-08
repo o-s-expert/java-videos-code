@@ -20,6 +20,8 @@
         <module>06-java-functions</module>
         <module>07-archi-unit</module>
         <module>08-java-design</module>
+        <module>09-mapstruct</module>
+        <module>10-modelmapper</module>
     </modules>
     
 </project>
