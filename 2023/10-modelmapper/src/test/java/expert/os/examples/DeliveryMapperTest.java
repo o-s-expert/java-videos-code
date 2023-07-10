@@ -13,31 +13,37 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 class DeliveryMapperTest {
+
     private ModelMapper mapper;
 
     @BeforeEach
     public void set() {
-        mapper = new ModelMapper();
-        Converter<String, UUID> converter = new AbstractConverter<>() {
+        this.mapper = new ModelMapper();
+
+        this.mapper.getConfiguration()
+                .setFieldMatchingEnabled(true)
+                .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE);
+
+        Converter<String, UUID> uuidConverter = new AbstractConverter<>() {
             @Override
-            protected UUID convert(String s) {
-                return UUID.fromString(s);
+            protected UUID convert(String source) {
+                return UUID.fromString(source);
             }
         };
 
-        Converter<String, LocalDate> converterDate = new AbstractConverter<>() {
+        Converter<String, LocalDate> localDateConverter = new AbstractConverter<>() {
             @Override
-            protected LocalDate convert(String s) {
-                return LocalDate.parse(s);
+            protected LocalDate convert(String source) {
+                return LocalDate.parse(source);
             }
         };
-        this.mapper.addConverter(converter);
-        this.mapper.addConverter(converterDate);
+
+        this.mapper.addConverter(uuidConverter);
+        this.mapper.addConverter(localDateConverter);
+
         TypeMap<DeliveryDTO, Delivery> typeMap = this.mapper.createTypeMap(DeliveryDTO.class, Delivery.class);
-        typeMap.addMappings(mapper -> mapper.using(converter).map(DeliveryDTO::getId, Delivery::setTrackId));
-        mapper.getConfiguration()
-                .setFieldMatchingEnabled(true)
-                .setFieldAccessLevel(Configuration.AccessLevel.PRIVATE);
+        typeMap.addMappings(mapping -> mapping.using(uuidConverter).map(DeliveryDTO::id, Delivery::setTrackId));
+
 
     }
 
@@ -50,10 +56,10 @@ class DeliveryMapperTest {
 
         SoftAssertions.assertSoftly(soft -> {
             soft.assertThat(dto).isNotNull();
-            soft.assertThat(dto.getCity()).isEqualTo(delivery.getCity());
-            soft.assertThat(dto.getCountry()).isEqualTo(delivery.getCountry());
-            soft.assertThat(dto.getId()).isEqualTo(delivery.getTrackId().toString());
-            soft.assertThat(dto.getWhen()).isEqualTo(delivery.getWhen().toString());
+            soft.assertThat(dto.city()).isEqualTo(delivery.getCity());
+            soft.assertThat(dto.country()).isEqualTo(delivery.getCountry());
+            soft.assertThat(dto.id()).isEqualTo(delivery.getTrackId().toString());
+            soft.assertThat(dto.when()).isEqualTo(delivery.getWhen().toString());
         });
     }
 
@@ -66,8 +72,8 @@ class DeliveryMapperTest {
         SoftAssertions.assertSoftly(soft ->{
             soft.assertThat(entity.getTrackId()).isEqualTo(uuid);
             soft.assertThat(entity.getWhen()).isEqualTo(now);
-            soft.assertThat(entity.getCity()).isEqualTo(dto.getCity());
-            soft.assertThat(entity.getCountry()).isEqualTo(dto.getCountry());
+            soft.assertThat(entity.getCity()).isEqualTo(dto.city());
+            soft.assertThat(entity.getCountry()).isEqualTo(dto.country());
         });
     }
 

@@ -28,28 +28,28 @@ public class Delivery {
         return trackId;
     }
 
-    public LocalDate getWhen() {
-        return when;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
     public void setTrackId(UUID trackId) {
         this.trackId = trackId;
+    }
+
+    public LocalDate getWhen() {
+        return when;
     }
 
     public void setWhen(LocalDate when) {
         this.when = when;
     }
 
+    public String getCity() {
+        return city;
+    }
+
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getCountry() {
+        return country;
     }
 
     public void setCountry(String country) {

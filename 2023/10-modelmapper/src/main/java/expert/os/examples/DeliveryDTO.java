@@ -18,36 +18,20 @@ public class DeliveryDTO {
     public DeliveryDTO() {
     }
 
-    public String getId() {
+    public String id() {
         return id;
     }
 
-    public String getWhen() {
+    public String when() {
         return when;
     }
 
-    public String getCity() {
+    public String city() {
         return city;
     }
 
-    public String getCountry() {
+    public String country() {
         return country;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setWhen(String when) {
-        this.when = when;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
     }
 
     @Override
