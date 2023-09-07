@@ -22,6 +22,7 @@
         <module>08-java-design</module>
         <module>09-mapstruct</module>
         <module>10-modelmapper</module>
+        <module>11-lombok</module>
     </modules>
     
 </project>
