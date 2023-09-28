@@ -23,6 +23,7 @@
         <module>09-mapstruct</module>
         <module>10-modelmapper</module>
         <module>11-lombok</module>
+        <module>12-java-21</module>
     </modules>
     
 </project>
