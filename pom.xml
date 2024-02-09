@@ -14,6 +14,7 @@
     <modules>
         <module>2022</module>
         <module>2023</module>
+        <module>2024</module>
     </modules>
     
 </project>
