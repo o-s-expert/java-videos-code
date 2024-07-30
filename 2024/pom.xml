@@ -13,6 +13,7 @@
 
     <modules>
         <module>01-refactoring-2024</module>
+        <module>02-exception-log</module>
     </modules>
     
 </project>
