@@ -1,5 +1,7 @@
 package expert.os.examples;
 
+import java.util.Optional;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,6 +18,18 @@ public class CreditCardService {
                     product.getId(), e.getMessage());
             LOGGER.log(Level.SEVERE, errorMessage, e);
         }
+    }
+
+    public void pay(UUID creditCardId, Product product) {
+        LOGGER.info("Paying with credit card: " + creditCardId);
+        LOGGER.fine("Paying for product: " + product);
+
+        findById(creditCardId).orElseThrow(() -> new CreditCardNotFoundException("Credit card not found with the id: " + creditCardId));
+    }
+
+    public Optional<CreditCard> findById(UUID id) {
+        LOGGER.info("Finding credit card by id: " + id);
+        return Optional.of(new CreditCard());
     }
 
 
