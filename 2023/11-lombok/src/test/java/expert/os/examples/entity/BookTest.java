@@ -14,7 +14,6 @@ class BookTest {
         assertEquals("1", book.id());
         assertEquals("The Lord of the Rings", book.title());
         assertEquals("J. R. R. Tolkien", book.author());
-        book.
 
     }
 
