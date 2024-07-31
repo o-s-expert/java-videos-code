@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>expert.os.examples</groupId>
-    <artifactId>01-refactoring-2024</artifactId>
+    <artifactId>02-exception-log</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <name>02-exception-log</name>
