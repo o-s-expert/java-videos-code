@@ -1,0 +1,104 @@
+= helidon
+:toc: auto
+
+Sample Helidon MP project that includes multiple REST operations.
+
+== Build and run
+
+With JDK21
+[source,bash]
+----
+mvn package
+java -jar target/helidon.jar
+----
+
+== Running Oracle NoSQL
+
+
+[source,bash]
+----
+docker run -d --name oracle-instance -p 8080:8080 ghcr.io/oracle/nosql:latest-ce
+----
+
+
+== Sample code illustrating the use of the REST API
+
+
+[source,bash]
+----
+curl --location --request PUT 'http://localhost:8181/machines' \
+--header 'Content-Type: application/json' \
+--data '{
+"id": "1",
+"model": "Thunderbolt V8",
+"engine": {
+"type": "gas",
+"horsepower": 450
+},
+"manufacturer": "Mustang",
+"year": 2021,
+"weight": 1600.0
+}'
+
+
+curl --location --request PUT 'http://localhost:8181/machines' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": "2",
+    "model": "Eagle Eye EV",
+    "engine": {
+        "type": "electric",
+        "horsepower": 300
+    },
+    "manufacturer": "Tesla",
+    "year": 2022,
+    "weight": 1400.0
+}
+'
+
+
+curl --location --request PUT 'http://localhost:8181/machines' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": "3",
+    "model": "Road Runner GT",
+    "engine": {
+        "type": "gas",
+        "horsepower": 400
+    },
+    "manufacturer": "Chevrolet",
+    "year": 2020,
+    "weight": 1700.0
+}
+'
+
+curl --location --request PUT 'http://localhost:8181/machines' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": "4",
+    "model": "Solaris X",
+    "engine": {
+        "type": "electric",
+        "horsepower": 350
+    },
+    "manufacturer": "Nissan",
+    "year": 2023,
+    "weight": 1350.0
+}
+'
+
+curl --location --request PUT 'http://localhost:8181/machines' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": "5",
+    "model": "Fusion Hybrid 2024",
+    "engine": {
+        "type": "electric",
+        "horsepower": 320
+    },
+    "manufacturer": "Toyota",
+    "year": 2024,
+    "weight": 1450.0
+}
+'
+----
