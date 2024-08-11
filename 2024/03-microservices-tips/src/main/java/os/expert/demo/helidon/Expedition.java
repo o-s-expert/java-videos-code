@@ -1,11 +1,13 @@
 package os.expert.demo.helidon;
 
+import java.time.LocalDate;
+
 public class Expedition {
     private String name;
     private String location;
-    private String date;
+    private LocalDate date;
 
-    public Expedition(String name, String location, String date) {
+    public Expedition(String name, String location, LocalDate date) {
         this.name = name;
         this.location = location;
         this.date = date;
@@ -19,7 +21,7 @@ public class Expedition {
         return location;
     }
 
-    public String getDate() {
+    public LocalDate getDate() {
         return date;
     }
 }

@@ -4,6 +4,7 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.PathParam;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Path("/api/v1/expeditions")
@@ -14,13 +15,13 @@ public class ExpeditionResource {
     @GET
     public List<Expedition> list() {
         return List.of(
-                new Expedition("Everest", "Nepal", "2022-03-01"),
-                new Expedition("K2", "Pakistan", "2022-06-01"),
-                new Expedition("Kangchenjunga", "Nepal", "2022-04-01"),
-                new Expedition("Lhotse", "Nepal", "2022-05-01"),
-                new Expedition("Makalu", "Nepal", "2022-07-01"),
-                new Expedition("Cho Oyu", "Nepal", "2022-08-01"),
-                new Expedition("Dhaulagiri", "Nepal", "2022-09-01"));
+                new Expedition("Everest", "Nepal", LocalDate.parse("2022-03-01")),
+                new Expedition("K2", "Pakistan", LocalDate.parse("2022-06-01")),
+                new Expedition("Kangchenjunga", "Nepal", LocalDate.parse("2022-04-01")),
+                new Expedition("Lhotse", "Nepal", LocalDate.parse("2022-05-01")),
+                new Expedition("Makalu", "Nepal", LocalDate.parse("2022-07-01")),
+                new Expedition("Cho Oyu", "Nepal", LocalDate.parse("2022-08-01")),
+                new Expedition("Dhaulagiri", "Nepal", LocalDate.parse("2022-09-01")));
     }
 
     @GET
@@ -31,8 +32,8 @@ public class ExpeditionResource {
     }
 
     @GET
-    @Path("/search")
-    public List<Expedition> mine() {
+    @Path("/my-expeditions")
+    public List<Expedition> myExpeditions() {
         //
         return List.of();
     }
