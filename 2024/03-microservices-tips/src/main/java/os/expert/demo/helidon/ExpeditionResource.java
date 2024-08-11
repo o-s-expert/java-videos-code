@@ -34,5 +34,6 @@ public class ExpeditionResource {
     @Path("/search")
     public List<Expedition> mine() {
         //
+        return List.of();
     }
 }
