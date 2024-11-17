@@ -16,6 +16,7 @@
         <module>02-exception-log</module>
         <module>03-microservices-tips</module>
         <module>04-pmd-checkstyle</module>
+        <module>05-jmolecules</module>
     </modules>
     
 </project>
