@@ -1,7 +1,10 @@
 package expert.os.examples;
 
+import org.jmolecules.ddd.annotation.Entity;
+
 import java.util.UUID;
 
+@Entity
 public class CreditCard {
 
     private UUID id;
