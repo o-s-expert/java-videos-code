@@ -11,7 +11,7 @@ public class JMoleculesDddUnitTest {
 
     @Test
     void checkTheLayerIntegration() {
-        String packageName = CreditCard.class.getPackageName();
+        String packageName = "expert.os.examples";
         JavaClasses classes = new ClassFileImporter().importPackages(packageName);
         JMoleculesArchitectureRules.ensureLayering().check(classes);
 
@@ -19,7 +19,7 @@ public class JMoleculesDddUnitTest {
 
     @Test
     void checkDDDIntegration() {
-        String packageName = CreditCard.class.getPackageName();
+        String packageName = "expert.os.examples";
         JavaClasses classes = new ClassFileImporter().importPackages(packageName);
         JMoleculesDddRules.all().check(classes);
 

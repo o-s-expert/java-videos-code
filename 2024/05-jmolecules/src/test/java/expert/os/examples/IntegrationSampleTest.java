@@ -10,7 +10,7 @@ import org.jmolecules.archunit.JMoleculesDddRules;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@AnalyzeClasses(packages = "example")
+@AnalyzeClasses(packages = "expert.os.examples")
 public class IntegrationSampleTest {
 
     @ArchTest
