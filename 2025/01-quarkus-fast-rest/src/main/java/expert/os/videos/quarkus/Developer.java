@@ -1,4 +1,4 @@
-package expert.os.books.ddd;
+package expert.os.videos.quarkus;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Column;

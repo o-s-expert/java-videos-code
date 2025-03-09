@@ -1,4 +1,4 @@
-package expert.os.books.ddd;
+package expert.os.videos.quarkus;
 
 import io.quarkus.hibernate.orm.rest.data.panache.PanacheEntityResource;
 
