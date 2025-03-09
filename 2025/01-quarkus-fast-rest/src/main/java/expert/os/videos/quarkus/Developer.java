@@ -1,4 +1,4 @@
-package expert.os.books.ddd.chapter13;
+package expert.os.videos.quarkus;
 
 import org.jmolecules.ddd.annotation.Association;
 import org.jmolecules.ddd.annotation.Entity;
@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-public class DomainExpert {
+public class Developer {
 
     @Identity
     private final UUID id;
@@ -18,7 +18,7 @@ public class DomainExpert {
     @Association
     private List<DomainStory> domainStories;
 
-    public DomainExpert(UUID id, String name) {
+    public Developer(UUID id, String name) {
         this.id = id;
         this.name = name;
     }

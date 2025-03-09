@@ -1,4 +1,4 @@
-package expert.os.books.ddd.chapter13;
+package expert.os.videos.quarkus;
 
 
 import org.jmolecules.ddd.annotation.ValueObject;
