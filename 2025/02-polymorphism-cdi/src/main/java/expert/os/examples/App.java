@@ -7,7 +7,7 @@ public class App {
 
     public static void main(String[] args) {
         try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-
+            OrquestraService orquestraService = container.select(OrquestraService.class).get();
         }
     }
 }
