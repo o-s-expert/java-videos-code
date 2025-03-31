@@ -13,6 +13,7 @@
 
     <modules>
         <module>01-quarkus-fast-rest</module>
+        <module>02-polymorphism-cdi</module>
     </modules>
     
 </project>
