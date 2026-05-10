@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>expert.os.books.architecture.patterns</groupId>
-    <artifactId>chapter-01</artifactId>
+    <groupId>expert.os.videos.2026</groupId>
+    <artifactId>01-test</artifactId>
     <version>1.0.0</version>
 
-    <name>chapter-01</name>
+    <name>01-test</name>
     <url>http://www.os.expert</url>
 
     <properties>
