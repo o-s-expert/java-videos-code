@@ -4,9 +4,13 @@ import java.math.BigDecimal;
 
 public class PaymentService {
 
-        public void processPayment(String userId, BigDecimal amount) {
+     public void process(String userId, BigDecimal amount) {
             // Simulate payment processing logic
-            System.out.println("Processing payment of $" + amount + " for user: " + userId);
-            // In a real application, you would integrate with a payment gateway here
-        }
+            System.out.println("Processing payment for user: " + userId + " with amount: " + amount);
+     }
+
+     public void addPayment(String userId, CreditCard card) {
+            // Simulate adding a new payment method for the user
+            System.out.println("Adding new payment method for user: " + userId);
+     }
 }
