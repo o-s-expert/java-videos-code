@@ -20,4 +20,11 @@ public class Team {
     public void remove(Player player) {
         players.remove(player);
     }
+
+    public void add(Player player) {
+        if (players.size() >= 11) {
+            throw new IllegalStateException("Team already has 11 players");
+        }
+        players.add(player);
+    }
 }
