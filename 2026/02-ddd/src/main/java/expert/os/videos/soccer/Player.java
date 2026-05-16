@@ -13,10 +13,5 @@ public class Player {
 
     private MonetaryAmount salary;
 
-    public Player(UUID id, String name, String city, MonetaryAmount salary) {
-        this.id = id;
-        this.name = name;
-        this.city = city;
-        this.salary = salary;
-    }
+    private Position position;
 }
