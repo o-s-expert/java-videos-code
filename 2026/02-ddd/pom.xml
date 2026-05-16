@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>expert.os.videos.2026</groupId>
-    <artifactId>01-test</artifactId>
+    <artifactId>02-ddd</artifactId>
     <version>1.0.0</version>
 
-    <name>01-test</name>
+    <name>02-ddd</name>
     <url>http://www.os.expert</url>
 
     <properties>
