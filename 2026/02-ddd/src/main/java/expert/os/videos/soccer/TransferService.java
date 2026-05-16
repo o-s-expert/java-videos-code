@@ -8,6 +8,6 @@ public class TransferService {
             Team destination) {
 
         source.remove(player);
-        destination.addPlayer(player);
+        destination.add(player);
     }
 }
