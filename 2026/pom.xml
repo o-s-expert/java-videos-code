@@ -13,6 +13,7 @@
 
     <modules>
         <module>01-test</module>
+        <module>02-ddd</module>
     </modules>
     
 </project>
