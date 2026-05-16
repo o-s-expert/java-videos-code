@@ -9,9 +9,23 @@ public class Player {
 
     private String name;
 
-    private String city;
-
-    private MonetaryAmount salary;
-
     private Position position;
+
+    public Player(UUID id, String name, Position position) {
+        this.id = id;
+        this.name = name;
+        this.position = position;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Position getPosition() {
+        return position;
+    }
 }
