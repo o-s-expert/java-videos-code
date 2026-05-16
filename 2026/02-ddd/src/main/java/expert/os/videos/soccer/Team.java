@@ -11,4 +11,13 @@ public class Team {
 
     private List<Player> players;
 
+    public Team(UUID id, String name, List<Player> players) {
+        this.id = id;
+        this.name = name;
+        this.players = players;
+    }
+
+    public void remove(Player player) {
+        players.remove(player);
+    }
 }
