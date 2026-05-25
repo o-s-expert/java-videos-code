@@ -7,5 +7,5 @@ import jakarta.enterprise.context.ApplicationScoped;
 @ApplicationScoped
 public interface AssistantService {
 
-    String chat(String userMessage);
+    String chat(String prompt);
 }
