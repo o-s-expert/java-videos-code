@@ -15,6 +15,7 @@
         <module>01-test</module>
         <module>02-ddd</module>
         <module>03-helo-world-ai</module>
+        <module>04-agents</module>
     </modules>
     
 </project>
