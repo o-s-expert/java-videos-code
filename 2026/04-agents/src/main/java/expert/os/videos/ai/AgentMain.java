@@ -8,10 +8,9 @@ public class AgentMain {
     public static void main(String[] args) {
         try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
             CustomerResolutionAgent agent = container.select(CustomerResolutionAgent.class).get();
+            String resolution = agent.resolveCustomer("I want to cancel my order, my email is otavio@otavio.com");
+            System.out.println(resolution);
 
-            String resolved = agent.resolveCustomer("Hello, my name is Otavio, email is otavio@otavio.com. Please, cancel my current order");
-
-            System.out.println("Agent execution finished: " + resolved);
         }
     }
 }
