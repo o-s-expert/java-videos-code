@@ -1,5 +1,6 @@
 package expert.os.videos.ai;
 
 public interface CustomerResolutionAgent {
-    String resolveCustomer(String userMessage);
+
+    String resolveCustomer(String text);
 }
