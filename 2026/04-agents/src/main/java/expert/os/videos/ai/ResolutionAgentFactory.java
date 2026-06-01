@@ -1,11 +1,11 @@
 package expert.os.videos.ai;
 
-import dev.langchain4j.agent.tool.Tool;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.service.AiServices;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Inject;
+
 
 @ApplicationScoped
 public class ResolutionAgentFactory {
@@ -17,7 +17,7 @@ public class ResolutionAgentFactory {
     private EnterpriseTools tools;
 
     @Produces
-    public CustomerResolutionAgent create(){
+    public CustomerResolutionAgent create() {
         return AiServices.builder(CustomerResolutionAgent.class)
                 .chatModel(chatModel)
                 .tools(tools)
