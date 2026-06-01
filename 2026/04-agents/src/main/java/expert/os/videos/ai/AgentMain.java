@@ -4,20 +4,14 @@ import jakarta.enterprise.inject.se.SeContainer;
 import jakarta.enterprise.inject.se.SeContainerInitializer;
 
 public class AgentMain {
+
     public static void main(String[] args) {
-        // Spin up the CDI container in a standard Java SE application
-        try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
+        try(SeContainer container = SeContainerInitializer.newInstance().initialize()) {
+            CustomerResolutionAgent agent = container.select(CustomerResolutionAgent.class).get();
 
-            // Fetch the Orchestrator Factory
-            ResolutionAgentFactory factory = container.select(ResolutionAgentFactory.class).get();
-            CustomerResolutionAgent agent = factory.createAgent();
+            String resolved = agent.resolveCustomer("Hello, my name is Otavio, email is otavio@otavio.com. Please, cancel my current order");
 
-            System.out.println("User: Hi, my email is alice@test.com. Please cancel my current order.");
-
-            // The ReAct loop happens automatically inside this method call!
-            String response = agent.resolveIssue("Hi, my email is alice@test.com. Please cancel my current order.");
-
-            System.out.println("Agent: " + response);
+            System.out.println("Agent execution finished: " + resolved);
         }
     }
 }
