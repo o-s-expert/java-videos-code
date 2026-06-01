@@ -1,9 +1,10 @@
 package expert.os.videos.ai;
 
-import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import dev.langchain4j.agent.tool.Tool;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.service.AiServices;
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Inject;
 
 @ApplicationScoped
@@ -13,13 +14,13 @@ public class ResolutionAgentFactory {
     private ChatModel chatModel;
 
     @Inject
-    private EnterpriseTools enterpriseTools;
+    private EnterpriseTools tools;
 
-    public CustomerResolutionAgent createAgent() {
+    @Produces
+    public CustomerResolutionAgent create(){
         return AiServices.builder(CustomerResolutionAgent.class)
                 .chatModel(chatModel)
-                .chatMemory(MessageWindowChatMemory.withMaxMessages(20))
-                .tools(enterpriseTools) // Injecting the suite of tools
+                .tools(tools)
                 .build();
     }
 }
