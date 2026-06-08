@@ -27,6 +27,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.eclipse</groupId>
+            <artifactId>yasson</artifactId>
+            <version>3.0.4</version>
+        </dependency>
+        <dependency>
             <groupId>org.eclipse.jnosql.databases</groupId>
             <artifactId>jnosql-oracle-nosql</artifactId>
             <version>${jnosql.version}</version>
