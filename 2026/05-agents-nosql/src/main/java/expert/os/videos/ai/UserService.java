@@ -3,6 +3,8 @@ package expert.os.videos.ai;
 import dev.langchain4j.agent.tool.Tool;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import org.eclipse.jnosql.mapping.Database;
+import org.eclipse.jnosql.mapping.DatabaseType;
 
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -15,7 +17,7 @@ public class UserService {
     private final UserRepository userRepository;
 
     @Inject
-    public UserService(UserRepository userRepository) {
+    public UserService(@Database(DatabaseType.DOCUMENT) UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
