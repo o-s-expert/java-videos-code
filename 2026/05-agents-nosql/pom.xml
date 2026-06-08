@@ -22,9 +22,15 @@
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
         <maven-javadoc-plugin.vesion>3.12.0</maven-javadoc-plugin.vesion>
         <langchain4j-cdi.version>1.3.0</langchain4j-cdi.version>
+        <jnosql.version>1.0.0</jnosql.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.eclipse.jnosql.databases</groupId>
+            <artifactId>jnosql-oracle-nosql</artifactId>
+            <version>${jnosql.version}</version>
+        </dependency>
         <dependency>
             <groupId>io.smallrye.config</groupId>
             <artifactId>smallrye-config-core</artifactId>
