@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>expert.os.videos.2026</groupId>
-    <artifactId>03-helo-world-ai</artifactId>
+    <artifactId>04-agents</artifactId>
     <version>1.0.0</version>
 
-    <name>03-helo-world-ai</name>
+    <name>04-agents</name>
     <url>http://www.os.expert</url>
 
     <properties>
