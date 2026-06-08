@@ -3,6 +3,8 @@ package expert.os.videos.ai;
 import dev.langchain4j.agent.tool.Tool;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import org.eclipse.jnosql.mapping.Database;
+import org.eclipse.jnosql.mapping.DatabaseType;
 
 import java.util.Optional;
 import java.util.UUID;
@@ -16,7 +18,7 @@ public class OrderService {
     private final OrderRepository repository;
 
     @Inject
-    public OrderService(OrderRepository repository) {
+    public OrderService(@Database(DatabaseType.DOCUMENT) OrderRepository repository) {
         this.repository = repository;
     }
 
