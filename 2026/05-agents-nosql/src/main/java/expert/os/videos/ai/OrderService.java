@@ -26,15 +26,15 @@ public class OrderService {
     @Tool("Finds the active Order Number for a given internal Customer ID.")
     public String getActiveOrderNumber(String customerId) {
         LOGGER.info("[TOOL EXECUTION] Looking up order for ID: " + customerId);
-        Optional<Order> order = repository.findByCustomerId(UUID.fromString(customerId));
-        return order.map(Order::id).map(UUID::toString).orElse("NO_ACTIVE_ORDERS");
+        Optional<Order> order = repository.findByCustomerId(customerId);
+        return order.map(Order::id).orElse("NO_ACTIVE_ORDERS");
     }
 
     // Tool C (Requires the output of Tool B)
     @Tool("Cancels an order given an Order Number. Returns the refund status.")
     public String cancelOrder(String orderNumber) {
         LOGGER.info("[TOOL EXECUTION] Calling payment gateway to cancel: " + orderNumber);
-        Optional<Order> order = repository.findById(UUID.fromString(orderNumber));
+        Optional<Order> order = repository.findById(orderNumber);
         order.ifPresent(o -> repository.save(o.cancel()));
         return order.isPresent() ? "SUCCESS - $45.00 Refunded" : "ORDER_NOT_FOUND";
     }
