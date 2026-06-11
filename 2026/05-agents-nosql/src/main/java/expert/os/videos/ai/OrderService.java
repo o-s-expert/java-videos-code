@@ -27,7 +27,7 @@ public class OrderService {
     public String getActiveOrderNumber(String customerId) {
         LOGGER.info("[TOOL EXECUTION] Looking up order for ID: " + customerId);
         Optional<Order> order = repository.findByCustomerId(customerId);
-        return order.map(Order::id).orElse("NO_ACTIVE_ORDERS");
+        return order.map(Order::id).map(UUID::toString).orElse("NO_ACTIVE_ORDERS");
     }
 
     // Tool C (Requires the output of Tool B)
