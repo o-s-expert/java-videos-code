@@ -12,5 +12,5 @@ import java.util.UUID;
 public interface OrderRepository extends BasicRepository<Order, UUID> {
 
     @Query("WHERE customerId = :customerId AND status = 'PLACED'")
-    Optional<Order> findByCustomerId(@Param("customerId") String customerId);
+    Optional<Order> findByCustomerId(@Param("customerId") UUID customerId);
 }
