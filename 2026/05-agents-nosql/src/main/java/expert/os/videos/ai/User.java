@@ -10,7 +10,7 @@ import java.util.UUID;
 public class User {
 
     @Id
-    private String id;
+    private UUID id;
 
     @Column
     private String email;
@@ -21,7 +21,7 @@ public class User {
     User() {
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
@@ -37,7 +37,7 @@ public class User {
         User user = new User();
         user.email = email;
         user.name = name;
-        user.id = UUID.randomUUID().toString();
+        user.id = UUID.randomUUID();
         return user;
     }
 }
