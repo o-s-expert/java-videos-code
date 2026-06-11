@@ -7,7 +7,7 @@ import jakarta.nosql.Id;
 import java.util.UUID;
 
 @Entity
-public record Order(@Id UUID id, @Column String customerId, @Column String product, @Column OrderStatus status) {
+public record Order(@Id UUID id, @Column UUID customerId, @Column String product, @Column OrderStatus status) {
 
 
     public static Order of(User user, String product) {
