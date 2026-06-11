@@ -26,7 +26,7 @@ public class OrderService {
     @Tool("Finds the active Order Number for a given internal Customer ID.")
     public String getActiveOrderNumber(String customerId) {
         LOGGER.info("[TOOL EXECUTION] Looking up order for ID: " + customerId);
-        Optional<Order> order = repository.findByCustomerId(customerId);
+        Optional<Order> order = repository.findByCustomerId(UUID.fromString(customerId));
         return order.map(Order::id).map(UUID::toString).orElse("NO_ACTIVE_ORDERS");
     }
 
