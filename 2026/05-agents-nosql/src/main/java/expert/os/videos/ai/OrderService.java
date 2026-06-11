@@ -34,7 +34,7 @@ public class OrderService {
     @Tool("Cancels an order given an Order Number. Returns the refund status.")
     public String cancelOrder(String orderNumber) {
         LOGGER.info("[TOOL EXECUTION] Calling payment gateway to cancel: " + orderNumber);
-        Optional<Order> order = repository.findById(orderNumber);
+        Optional<Order> order = repository.findById(UUID.fromString(orderNumber));
         order.ifPresent(o -> repository.save(o.cancel()));
         return order.isPresent() ? "SUCCESS - $45.00 Refunded" : "ORDER_NOT_FOUND";
     }
