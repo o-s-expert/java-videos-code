@@ -17,6 +17,7 @@
         <module>03-helo-world-ai</module>
         <module>04-agents</module>
         <module>05-agents-nosql</module>
+        <module>06-factory-patterns</module>
     </modules>
     
 </project>
