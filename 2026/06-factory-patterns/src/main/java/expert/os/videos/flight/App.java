@@ -8,11 +8,13 @@ public class App {
 
         builderExample();
 
+        fluentApiExample();
+
         factoryExample();
     }
 
     private static void constructorExample() {
-        System.out.println("=== Constructor ===");
+        System.out.println("\n=== Constructor ===");
 
         FlightBooking booking = new FlightBooking(
                 "Otavio Santana",
@@ -23,16 +25,6 @@ public class App {
         );
 
         System.out.println(booking);
-
-        // Easy to make mistakes:
-        //
-        // FlightBooking booking = new FlightBooking(
-        //         "Otavio Santana",
-        //         "Paris",
-        //         "Lisbon",
-        //         "12A",
-        //         1
-        // );
     }
 
     private static void builderExample() {
@@ -45,6 +37,21 @@ public class App {
                 .seatNumber("12A")
                 .baggageCount(1)
                 .build();
+
+        System.out.println(booking);
+    }
+
+    private static void fluentApiExample() {
+        System.out.println("\n=== Fluent API ===");
+
+        FlightBooking booking = FlightBookingFlow
+                .bookFlight()
+                .from("Lisbon")
+                .to("Paris")
+                .forPassenger("Otavio Santana")
+                .seat("12A")
+                .withBags(1)
+                .confirm();
 
         System.out.println(booking);
     }
