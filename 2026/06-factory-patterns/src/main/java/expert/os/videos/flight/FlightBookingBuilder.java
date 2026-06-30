@@ -10,41 +10,42 @@ public class FlightBookingBuilder {
     private int baggageCount;
 
     public FlightBookingBuilder passengerName(String passengerName) {
-        this.passengerName =   Objects.requireNonNull(passengerName, "Passenger name must not be null");;
+        this.passengerName = Objects.requireNonNull(passengerName, "Passenger name cannot be null");
         return this;
     }
 
     public FlightBookingBuilder departureCity(String departureCity) {
-        this.departureCity =    Objects.requireNonNull(departureCity, "Departure city must not be null");;
+        this.departureCity = departureCity;
         return this;
     }
 
     public FlightBookingBuilder destinationCity(String destinationCity) {
-        this.destinationCity =  Objects.requireNonNull(destinationCity, "Destination city must not be null");;
+        this.destinationCity = destinationCity;
         return this;
     }
 
     public FlightBookingBuilder seatNumber(String seatNumber) {
-        this.seatNumber =   Objects.requireNonNull(seatNumber, "Seat number must not be null");;
+        this.seatNumber = seatNumber;
         return this;
     }
 
     public FlightBookingBuilder baggageCount(int baggageCount) {
-        if(baggageCount < 0) {
-            throw new IllegalArgumentException("Baggage count must not be negative");
-        }
         this.baggageCount = baggageCount;
         return this;
     }
 
     public FlightBooking build() {
-        Objects.requireNonNull(passengerName, "Passenger name must not be null");
-        Objects.requireNonNull(departureCity, "Departure city must not be null");
-        Objects.requireNonNull(destinationCity, "Destination city must not be null");
-        Objects.requireNonNull(seatNumber, "Seat number must not be null");
+        Objects.requireNonNull(passengerName, "Passenger name cannot be null");
+        Objects.requireNonNull(departureCity, "Departure city cannot be null");
+        Objects.requireNonNull(destinationCity, "Destination city cannot be null");
+        Objects.requireNonNull(seatNumber, "Seat number cannot be null");
         if(baggageCount < 0) {
-            throw new IllegalArgumentException("Baggage count must not be negative");
+            throw new IllegalArgumentException("Baggage count cannot be negative");
         }
+        if(departureCity.equals(destinationCity)) {
+            throw new IllegalArgumentException("Departure and destination cities cannot be the same");
+        }
+
         return new FlightBooking(passengerName, departureCity, destinationCity, seatNumber, baggageCount);
     }
 }

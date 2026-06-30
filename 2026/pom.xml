@@ -18,6 +18,7 @@
         <module>04-agents</module>
         <module>05-agents-nosql</module>
         <module>06-factory-patterns</module>
+        <module>07-search-http-verb</module>
     </modules>
     
 </project>

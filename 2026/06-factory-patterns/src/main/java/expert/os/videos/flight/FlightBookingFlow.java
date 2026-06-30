@@ -1,27 +1,20 @@
 package expert.os.videos.flight;
 
+public class FlightBookingFlow {
 
-public final class FlightBookingFlow {
-
-    private FlightBookingFlow() {
+    public static DepartureCityStep bookFlight() {
+        return departureCity ->
+                destinationCity ->
+                passengerName ->
+                seatNumber ->
+                baggageCount ->
+                        () ->new FlightBooking(departureCity, destinationCity, passengerName, seatNumber, baggageCount);
+    }
+    public interface DepartureCityStep {
+        DestinationCityStep from(String departureCity);
     }
 
-    public static DepartureStep bookFlight() {
-        return departureCity -> destinationCity -> passengerName -> seatNumber -> baggageCount ->
-                () -> new FlightBooking(
-                        passengerName,
-                        departureCity,
-                        destinationCity,
-                        seatNumber,
-                        baggageCount
-                );
-    }
-
-    public interface DepartureStep {
-        DestinationStep from(String departureCity);
-    }
-
-    public interface DestinationStep {
+    public interface DestinationCityStep {
         PassengerStep to(String destinationCity);
     }
 
